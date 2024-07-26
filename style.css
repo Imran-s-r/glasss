@@ -1,0 +1,174 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-image: linear-gradient(to right,#111, #222);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+body::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(35% at right 70%);
+    z-index: -1;
+
+}
+.container{
+    width: 80%;
+    height: 80%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 20px;
+
+}
+/* ----------------------------------------------------------------------------- */
+
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+}
+nav .logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 2px;
+}
+nav ul{
+    width: 60%;
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.6s;
+}
+nav ul li a:hover{
+    color: red;
+}
+.content{
+    height: 100%;
+    width: 100%;
+display: flex;   
+justify-content: space-evenly; 
+align-items: center;
+color: white;
+overflow: hidden;
+}
+.text{
+    margin-left: 10px;
+    width: 40%;
+}
+
+.content h2{
+    font-size: 40px;
+   
+}
+span{
+    color: red;
+
+}
+p{
+    font-size: 20px;
+    letter-spacing: 2px;
+    
+}
+.img{
+    margin: 20px;
+}
+
+.img img{
+    width: 300px;
+    height:300px;
+    border-radius: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 825px){
+    nav ul li a{
+        font-size: 14px;
+    }
+    
+    .content h2{
+        font-size: 35px;
+       
+    }
+ 
+    p{
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+    .img img{
+        width: 200px;
+        height:200px;
+        border-radius: 30%;
+    }
+ 
+
+      
+}
+@media (max-width: 600px){
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        margin-top: 20px;
+    }
+    .content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 100%;
+    }
+    .text{
+        width: 80%;
+    }
+    body::after{
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: red;
+        position: absolute;
+        clip-path: circle(50% at bottom);
+        z-index: -1;
+    
+    }
+    nav ul{
+        width: 100%;
+        
+    
+    }
+}
+
+
